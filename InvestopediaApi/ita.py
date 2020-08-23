@@ -54,9 +54,9 @@ class Account:
 
         # you have to select the form before you can input information to it
         # the login form used to be at nr=2, now it's at nr=0
-        login_form = login_page.soup.select("form#account-api-form")[0]
-        login_form.select("#edit-email")[0]["value"] = email
-        login_form.select("#edit-password")[0]["value"] = password
+        login_form = login_page.soup.select("form")[0]
+        login_form.select("#username")[0]["value"] = email
+        login_form.select("#password")[0]["value"] = password
         home_page = br.submit(login_form, login_page.url)
 
         # select competition to use
