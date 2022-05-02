@@ -237,7 +237,7 @@ class Account:
         """
 
         br = self.br
-        trade_page = self.fetch('/simulator/trade/tradestock.aspx')
+        trade_page = self.fetch('/simulator/trade')
         trade_form = trade_page.soup.select("form#orderForm")[0]
 
         # input symbol, quantity, etc.
