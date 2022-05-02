@@ -61,10 +61,10 @@ class Account:
 
         # select competition to use
         try:
-            competition_form = home_page.soup.select("form#ddlGamesJoinedForm")[0]
+            '''competition_form = home_page.soup.select("form#ddlGamesJoinedForm")[0]
             [option.attrs.pop("selected", "") for option in competition_form.select("select#edit-salutation")[0]("option")]
             competition_form.select("select#edit-salutation")[0].find_all("option")[competition_number]["selected"] = True
-            br.submit(competition_form, home_page.url)
+            br.submit(competition_form, home_page.url)'''
             self.logged_in = True
         except IndexError:
             raise LoginError
